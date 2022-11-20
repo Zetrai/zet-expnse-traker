@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
+import THEME from '../../theme/theme.styles';
+
 export const CardContainer = styled.div`
-  background-color: #80cbc4;
+  background-color: ${THEME.lightblue};
   margin: 24px;
   padding: 24px;
   border-radius: 33px;

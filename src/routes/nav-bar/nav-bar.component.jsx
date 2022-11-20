@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 
 import { ReactComponent as ExpenseIcon } from '../../assets/icons/expense.svg';
 import { ReactComponent as IncomeIcon } from '../../assets/icons/income.svg';
+
 import { NavContainer, NavLinks, NavIcon } from './nav-bar.styles';
 
 const NavBar = () => {
@@ -11,10 +12,10 @@ const NavBar = () => {
       <Outlet />
       <NavContainer>
         <NavLinks>
-          <NavIcon to='/'>
+          <NavIcon activeClassName='active' to='/'>
             <ExpenseIcon />
           </NavIcon>
-          <NavIcon to='/my-income'>
+          <NavIcon activeClassName='active' to='/my-income'>
             <IncomeIcon />
           </NavIcon>
         </NavLinks>

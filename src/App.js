@@ -5,16 +5,18 @@ import NavBar from './routes/nav-bar/nav-bar.component';
 import MyExpense from './routes/my-expenses/my-expenses.component';
 import MyIncome from './routes/my-income/my-income.component';
 
-import './App.css';
+import { AppContainer } from './App.styles.jsx';
 
 const App = () => {
   return (
-    <Routes>
-      <Route path='/' element={<NavBar />}>
-        <Route index element={<MyExpense />} />
-        <Route path='my-income' element={<MyIncome />} />+
-      </Route>
-    </Routes>
+    <AppContainer>
+      <Routes>
+        <Route path='/' element={<NavBar />}>
+          <Route index element={<MyExpense />} />
+          <Route path='my-income' element={<MyIncome />} />+
+        </Route>
+      </Routes>
+    </AppContainer>
   );
 };
 
