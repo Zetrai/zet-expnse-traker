@@ -8,5 +8,5 @@ export const HeaderContainer = styled.div`
 
 export const Title = styled.h6`
   margin: 0;
-  ${fontStyle('Primary', THEME.text, 'normal', 'left', 36, 48, 0)}
+  ${fontStyle('Primary', THEME.text, 'normal', 'center', 36, 48, 0)}
 `;

@@ -1,9 +1,13 @@
 import { initializeApp } from 'firebase/app';
 import {
   getAuth,
+  onAuthStateChanged,
   signInWithRedirect,
   signInWithPopup,
+  signOut,
   GoogleAuthProvider,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
 } from 'firebase/auth';
 import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
 
@@ -18,26 +22,30 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const firebase = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 
-const provider = new GoogleAuthProvider();
+const googleProvider = new GoogleAuthProvider();
 
-provider.setCustomParameters({
+googleProvider.setCustomParameters({
   prompt: 'select_account',
 });
 
 export const auth = getAuth();
-export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
+export const signInWithGooglePopup = () =>
+  signInWithPopup(auth, googleProvider);
+export const signInWithGoogleRedirect = () =>
+  signInWithRedirect(auth, googleProvider);
 
 // Initialize Database from firestore
 export const db = getFirestore();
 
+// Create User Document in DB from auth
 export const createUserDocumentFromAuth = async (
   userAuth,
   additionalInfo = {}
 ) => {
+  if (!userAuth) return;
   const userDocRef = doc(db, 'users', userAuth.uid);
-  console.log(userDocRef);
 
   const userSnapShot = await getDoc(userDocRef);
 
@@ -57,3 +65,29 @@ export const createUserDocumentFromAuth = async (
     }
   }
 };
+
+// Email And Password functions
+export const createAuthUserWithEmailAndPassword = async (email, password) => {
+  if (!email || !password) return;
+
+  return await createUserWithEmailAndPassword(auth, email, password);
+};
+
+export const signInAuthUserWithEmailAndPassword = async (email, password) => {
+  if (!email || !password) return;
+
+  return await signInWithEmailAndPassword(auth, email, password);
+};
+
+export const signOutUser = async () => await signOut(auth);
+
+// onAuthStateChanged is an Observable Listner (hover over it)
+/**
+ * {
+ * next: callback
+ * error: errorCallback,
+ * complete: completeCallback
+ * }
+ */
+export const onAuthStateChangedListner = (callback) =>
+  onAuthStateChanged(auth, callback);
