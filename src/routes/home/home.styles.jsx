@@ -1,3 +1,6 @@
 import styled from 'styled-components';
+import THEME, { fontStyle } from '../../theme/theme.styles';
 
-const HomeContainer = styled.div``;
+export const HomeContainer = styled.div`
+  margin-top: 30px;
+`;

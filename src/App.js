@@ -2,8 +2,10 @@ import { Routes, Route } from 'react-router-dom';
 
 import NavBar from './routes/nav-bar/nav-bar.component';
 
-import MyExpense from './routes/my-expenses/my-expenses.component';
-import MyIncome from './routes/my-income/my-income.component';
+import Home from './routes/home/home.component';
+import Transactions from './routes/transactions/transactions.component';
+import Stats from './routes/stats/stats.component';
+import Profile from './routes/profile/profile.component';
 
 import { AppContainer } from './App.styles.jsx';
 
@@ -12,8 +14,10 @@ const App = () => {
     <AppContainer>
       <Routes>
         <Route path='/' element={<NavBar />}>
-          <Route index element={<MyExpense />} />
-          <Route path='my-income' element={<MyIncome />} />+
+          <Route index element={<Home />} />
+          <Route path='transactions' element={<Transactions />} />+
+          <Route path='stats' element={<Stats />} />
+          <Route path='profile' element={<Profile />} />
         </Route>
       </Routes>
     </AppContainer>
