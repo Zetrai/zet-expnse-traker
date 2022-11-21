@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { getRedirectResult } from 'firebase/auth';
 import { isMobile } from 'react-device-detect';
 
 import {
-  auth,
   signInWithGooglePopup,
-  createUserDocumentFromAuth,
   signInWithGoogleRedirect,
   signInAuthUserWithEmailAndPassword,
 } from '../../utils/firebase/firebase.util';
@@ -27,25 +24,17 @@ const defaultFormFields = {
 const SignInForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
+
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
   };
 
   useEffect(() => {
-    // For Google Sign In via Redirect
-    const redirectResult = async () => {
-      const response = await getRedirectResult(auth);
-      if (response) {
-        await createUserDocumentFromAuth(response.user);
-      }
-    };
-    redirectResult();
+    resetFormFields();
   }, []);
 
   const signInWithGoogle = async () => {
-    const { user } = await signInWithGooglePopup();
-
-    createUserDocumentFromAuth(user);
+    await signInWithGooglePopup();
   };
 
   const handleChange = (event) => {
@@ -59,8 +48,6 @@ const SignInForm = () => {
 
     try {
       await signInAuthUserWithEmailAndPassword(email, password);
-
-      resetFormFields();
     } catch (error) {
       console.log(error);
       switch (error.code) {

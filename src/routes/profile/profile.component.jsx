@@ -1,33 +1,25 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 
 import Header from '../../components/header/header.component';
-import TopNav from '../../components/top-nav/top-nav.component';
-import SignInForm from '../../components/sign-in-form/sign-in-form.component';
-import SignUpForm from '../../components/sign-up-form/sign-up-form.component';
+import Authentication from '../../components/authentication/authentication.component';
+import ProfileDashboard from '../../components/profile-dashboard/profile-dashboard.component';
+import { ReactComponent as ProfileLogo } from '../../assets/icons/people_circle.svg';
 
-import { ProfileContainer, NavContainer } from './profile.styles';
+import { signOutUser } from '../../utils/firebase/firebase.util';
+
+import { UserContext } from '../../contexts/user.context';
+
+import { ProfileContainer } from './profile.styles';
 
 const Profile = () => {
-  const [active, setActive] = useState('signIn');
-  const RegisterHandler = () => {
-    setActive('register');
-  };
-  const SignInHandler = () => {
-    setActive('signIn');
-  };
+  const { currentUser } = useContext(UserContext);
+
+  const check = () => <ProfileLogo onClick={signOutUser} />;
+
   return (
     <ProfileContainer>
-      <Header title='Profile' />
-      {active === 'signIn' && <SignInForm />}
-      {active === 'register' && <SignUpForm />}
-      <NavContainer>
-        <TopNav
-          buttonOneText='Register'
-          buttonOneHandler={RegisterHandler}
-          buttonTwoText='Sign In'
-          buttonTwoHandler={SignInHandler}
-        />
-      </NavContainer>
+      <Header title='Profile' ProfileLogo={currentUser ? check : undefined} />
+      {!currentUser ? <Authentication /> : <ProfileDashboard />}
     </ProfileContainer>
   );
 };

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ProfileContainer = styled.div`
+export const AuthContainer = styled.div`
   margin-top: 30px;
 `;
 
