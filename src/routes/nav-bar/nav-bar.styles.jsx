@@ -5,9 +5,9 @@ import THEME from '../../theme/theme.styles';
 
 export const NavBarContainer = styled.div`
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: 11fr 1fr;
+  row-gap: 20px;
 `;
 
 export const NavContainer = styled.div`
