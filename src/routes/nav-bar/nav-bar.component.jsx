@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Outlet } from 'react-router-dom';
 
 import { ReactComponent as HomeIcon } from '../../assets/icons/home.svg';
@@ -6,11 +6,16 @@ import { ReactComponent as WalletIcon } from '../../assets/icons/wallet.svg';
 import { ReactComponent as PieChartIcon } from '../../assets/icons/pie-chart.svg';
 import { ReactComponent as ProfileIcon } from '../../assets/icons/profile.svg';
 
-import { NavContainer, NavLinks, NavIcon } from './nav-bar.styles';
+import {
+  NavBarContainer,
+  NavContainer,
+  NavLinks,
+  NavIcon,
+} from './nav-bar.styles';
 
 const NavBar = () => {
   return (
-    <Fragment>
+    <NavBarContainer>
       <Outlet />
       <NavContainer>
         <NavLinks>
@@ -40,7 +45,7 @@ const NavBar = () => {
           </NavIcon>
         </NavLinks>
       </NavContainer>
-    </Fragment>
+    </NavBarContainer>
   );
 };
 

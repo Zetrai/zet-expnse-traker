@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import THEME, { fontStyle } from '../../theme/theme.styles';
 
 export const HeaderContainer = styled.div`
-  margin: 0 24px 40px 24px;
-
   svg {
     width: 60px;
     height: 60px;

@@ -3,9 +3,15 @@ import { NavLink } from 'react-router-dom';
 
 import THEME from '../../theme/theme.styles';
 
+export const NavBarContainer = styled.div`
+  height: 100%;
+  display: grid;
+  align-content: space-between;
+`;
+
 export const NavContainer = styled.div`
   background-color: ${THEME.black};
-  position: absolute;
+  /* position: absolute; */
   bottom: 24px;
   width: 100%;
 `;

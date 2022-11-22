@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 
 export const ProfileContainer = styled.div`
-  margin-top: 30px;
+  margin-top: 15px;
+  height: 87vh;
+  display: grid;
+  grid-template-rows: 1fr 12fr;
+  row-gap: 30px;
 `;
 
 export const NavContainer = styled.div`
