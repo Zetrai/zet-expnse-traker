@@ -4,9 +4,10 @@ import { NavLink } from 'react-router-dom';
 import THEME from '../../theme/theme.styles';
 
 export const NavBarContainer = styled.div`
-  height: 100%;
-  display: grid;
-  align-content: space-between;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 export const NavContainer = styled.div`
