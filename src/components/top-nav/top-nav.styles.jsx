@@ -3,9 +3,11 @@ import styled from 'styled-components';
 import THEME, { fontStyle } from '../../theme/theme.styles';
 
 export const TopNavContainer = styled.div`
-  margin: 0 24px 24px 24px;
   background-color: ${THEME.grey};
   border-radius: 25px;
+  margin: 0px 5%;
+  position: absolute;
+  width: 88%;
 
   button {
     ${fontStyle('Roboto-Medium', THEME.text, 'normal', 'center', 16, 16, 0)};

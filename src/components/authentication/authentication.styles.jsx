@@ -8,10 +8,6 @@ export const AuthContainer = styled.div`
 
 export const NavContainer = styled.div`
   position: relative;
-`;
-
-export const AbsoluteContainer = styled.div`
-  /* position: absolute; */
-  width: -webkit-fill-available;
-  bottom: 80px;
+  width: 100%;
+  bottom: 60px;
 `;
