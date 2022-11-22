@@ -16,16 +16,14 @@ const Authentication = () => {
   };
   return (
     <AuthContainer>
+      <TopNav
+        buttonOneText='Register'
+        buttonOneHandler={RegisterHandler}
+        buttonTwoText='Sign In'
+        buttonTwoHandler={SignInHandler}
+      />
       {active === 'signIn' && <SignInForm />}
       {active === 'register' && <SignUpForm />}
-      <NavContainer>
-        <TopNav
-          buttonOneText='Register'
-          buttonOneHandler={RegisterHandler}
-          buttonTwoText='Sign In'
-          buttonTwoHandler={SignInHandler}
-        />
-      </NavContainer>
     </AuthContainer>
   );
 };

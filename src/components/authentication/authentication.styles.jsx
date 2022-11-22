@@ -3,11 +3,8 @@ import styled from 'styled-components';
 export const AuthContainer = styled.div`
   height: auto;
   display: grid;
-  align-content: space-between;
+  grid-template-rows: 1fr 12fr;
+  row-gap: 30px;
 `;
 
-export const NavContainer = styled.div`
-  position: relative;
-  width: 100%;
-  bottom: 60px;
-`;
+export const NavContainer = styled.div``;
