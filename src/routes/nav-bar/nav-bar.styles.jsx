@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import THEME from '../../theme/theme.styles';
 
 export const NavBarContainer = styled.div`
-  height: 100vh;
+  height: 100%;
   display: grid;
   grid-template-rows: 11fr 1fr;
   row-gap: 20px;
@@ -12,9 +12,9 @@ export const NavBarContainer = styled.div`
 
 export const NavContainer = styled.div`
   background-color: ${THEME.black};
-  /* position: absolute; */
-  bottom: 24px;
   width: 100%;
+  position: absolute;
+  bottom: 20px;
 `;
 
 export const NavLinks = styled.div`
