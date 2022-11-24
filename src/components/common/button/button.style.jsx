@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import THEME, { fontStyle } from '../../theme/theme.styles';
+import THEME, { fontStyle } from '../../../theme/theme.styles';
 
 export const BaseButton = styled.button`
   ${fontStyle('Roboto-Bold', THEME.text, 'bold', 'center', 15, 50, 0.5)};

@@ -5,10 +5,13 @@ import {
   signInWithGooglePopup,
   signInWithGoogleRedirect,
   signInAuthUserWithEmailAndPassword,
-} from '../../utils/firebase/firebase.util';
+} from '../../../utils/firebase/firebase.util';
 
-import FormInput from '../form-input/form-input.component';
-import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component';
+import FormInput from '../../common/form-input/form-input.component';
+
+import Button, {
+  BUTTON_TYPE_CLASSES,
+} from '../../common/button/button.component';
 
 import {
   SignInFormContainer,

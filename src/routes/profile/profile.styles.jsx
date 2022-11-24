@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ProfileContainer = styled.div`
-  margin-top: 15px;
+  margin-top: 30px;
   height: 87vh;
   display: grid;
   grid-template-rows: 1fr 12fr;

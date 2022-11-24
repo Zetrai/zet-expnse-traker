@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
-import { createAuthUserWithEmailAndPassword } from '../../utils/firebase/firebase.util';
+import { createAuthUserWithEmailAndPassword } from '../../../utils/firebase/firebase.util';
 
-import FormInput from '../form-input/form-input.component';
-import Button from '../button/button.component';
+import FormInput from '../../common/form-input/form-input.component';
+import Button from '../../common/button/button.component';
 
 import {
   ButtonsContainer,

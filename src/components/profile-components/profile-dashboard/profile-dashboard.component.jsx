@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import { UserContext } from '../../contexts/user.context';
+import { UserContext } from '../../../contexts/user.context';
 
 import { DashboardContainer, Title } from './profile-dashboard.styles';
 

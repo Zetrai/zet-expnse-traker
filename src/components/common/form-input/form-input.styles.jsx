@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import THEME, { fontStyle } from '../../theme/theme.styles';
+import THEME, { fontStyle } from '../../../theme/theme.styles';
 
 const subColor = 'grey';
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import THEME, { fontStyle } from '../../theme/theme.styles';
+import THEME, { fontStyle } from '../../../theme/theme.styles';
 
 export const DashboardContainer = styled.div`
   margin: 0 24px;
