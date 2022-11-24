@@ -11,6 +11,7 @@ import {
   updateProfile,
 } from 'firebase/auth';
 import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
+import { getAnalytics } from 'firebase/analytics';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -20,10 +21,12 @@ const firebaseConfig = {
   storageBucket: 'expense-trackr-d42f9.appspot.com',
   messagingSenderId: '512674429143',
   appId: '1:512674429143:web:74ec811dead076d9b7d892',
+  measurementId: 'G-LBMM8WS5EF',
 };
 
 // Initialize Firebase
-initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
+getAnalytics(app);
 
 const googleProvider = new GoogleAuthProvider();
 

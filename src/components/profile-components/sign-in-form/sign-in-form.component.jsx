@@ -101,7 +101,7 @@ const SignInForm = () => {
           <Button
             buttonType={BUTTON_TYPE_CLASSES.nonFocus}
             type='button'
-            onClick={isMobile ? signInWithGoogleRedirect : signInWithGoogle}
+            onClick={isMobile ? signInWithGoogle : signInWithGoogle}
           >
             <GoogleIconContainer>
               <GoogleIcon />

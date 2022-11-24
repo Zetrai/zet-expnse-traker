@@ -20,6 +20,7 @@ export const UserProvider = ({ children }) => {
       if (user) {
         await createUserDocumentFromAuth(user);
       }
+      console.log(user);
       setCurrentUser(user);
     });
     return unsubscribe;
