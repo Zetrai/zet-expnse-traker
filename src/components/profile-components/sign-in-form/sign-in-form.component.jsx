@@ -7,6 +7,8 @@ import {
   signInAuthUserWithEmailAndPassword,
 } from '../../../utils/firebase/firebase.util';
 
+import { ReactComponent as GoogleIcon } from '../../../assets/icons/google-icon.svg';
+
 import FormInput from '../../common/form-input/form-input.component';
 
 import Button, {
@@ -16,6 +18,8 @@ import Button, {
 import {
   SignInFormContainer,
   ButtonsContainer,
+  GoogleIconContainer,
+  LineTextContainer,
   SignInText,
 } from './sign-in-form.styles';
 
@@ -91,12 +95,17 @@ const SignInForm = () => {
         />
         <ButtonsContainer>
           <Button type='submit'>Sign In</Button>
-          <br />
+          <LineTextContainer>
+            <span>or sign in with google</span>
+          </LineTextContainer>
           <Button
-            buttonType={BUTTON_TYPE_CLASSES.google}
+            buttonType={BUTTON_TYPE_CLASSES.nonFocus}
             type='button'
             onClick={isMobile ? signInWithGoogleRedirect : signInWithGoogle}
           >
+            <GoogleIconContainer>
+              <GoogleIcon />
+            </GoogleIconContainer>
             Sign In With Google
           </Button>
         </ButtonsContainer>

@@ -12,7 +12,7 @@ export const BaseButton = styled.button`
   cursor: pointer;
   display: flex;
   justify-content: center;
-  border-radius: 12px;
+  border-radius: 8px;
 
   &:hover {
     background-color: white;
@@ -21,9 +21,9 @@ export const BaseButton = styled.button`
   }
 `;
 
-export const GoogleSignInButton = styled(BaseButton)`
-  background-color: #4285f4;
-  color: white;
+export const NonFocusButton = styled(BaseButton)`
+  background-color: ${THEME.grey};
+  opacity: 70%;
   &:hover {
     background-color: #357ae8;
     border: none;
