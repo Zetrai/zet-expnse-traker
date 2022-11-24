@@ -2,7 +2,7 @@ import React from 'react';
 
 import HomeOverviewCard from '../home-overview-card/home-overview-card.component';
 
-import THEME from '../../theme/theme.styles';
+import THEME from '../../../theme/theme.styles';
 import { OverviewContainer } from './home-overview.styles';
 
 const HomeOverview = () => {
