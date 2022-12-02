@@ -7,8 +7,9 @@ const TopNav = ({
   buttonOneHandler,
   buttonTwoText,
   buttonTwoHandler,
+  initActive,
 }) => {
-  const [active, setActive] = useState('buttonTwo');
+  const [active, setActive] = useState(initActive);
   const buttonHandlerOne = (event) => {
     setActive(event.target.id);
     buttonOneHandler();

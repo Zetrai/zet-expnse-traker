@@ -22,13 +22,13 @@ export const fontStyle = (
   lineHeight,
   letterSpacing
 ) => `
-font-family: ${family}, 'Segoe UI', 'Roboto';
-color: ${color};
-font-weight: ${fontWeight};
-text-align: ${textAlign};
-font-size: ${size}px;
-line-height: ${lineHeight}px;
-letter-spacing: ${letterSpacing}px
+  font-family: ${family}, 'Segoe UI', 'Roboto';
+  color: ${color};
+  font-weight: ${fontWeight};
+  text-align: ${textAlign};
+  font-size: ${size}px;
+  line-height: ${lineHeight}px;
+  letter-spacing: ${letterSpacing}px
 `;
 
 export default THEME;

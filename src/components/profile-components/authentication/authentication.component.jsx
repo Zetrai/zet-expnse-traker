@@ -21,9 +21,9 @@ const Authentication = () => {
         buttonOneHandler={RegisterHandler}
         buttonTwoText='Sign In'
         buttonTwoHandler={SignInHandler}
+        initActive='buttonTwo'
       />
-      {active === 'signIn' && <SignInForm />}
-      {active === 'register' && <SignUpForm />}
+      {active === 'signIn' ? <SignInForm /> : <SignUpForm />}
     </AuthContainer>
   );
 };

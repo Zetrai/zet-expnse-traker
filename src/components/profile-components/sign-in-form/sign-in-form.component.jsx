@@ -3,7 +3,6 @@ import { isMobile } from 'react-device-detect';
 
 import {
   signInWithGooglePopup,
-  signInWithGoogleRedirect,
   signInAuthUserWithEmailAndPassword,
 } from '../../../utils/firebase/firebase.util';
 
