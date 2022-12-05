@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import THEME, { fontStyle } from '../../../theme/theme.styles';
 
 export const SignUpFormContainer = styled.div`
-  margin: 0 24px;
+  margin: 20px 24px;
 `;
 
 export const ButtonsContainer = styled.div`
