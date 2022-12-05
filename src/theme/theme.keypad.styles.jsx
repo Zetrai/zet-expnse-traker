@@ -2,6 +2,10 @@ import styled from 'styled-components';
 import THEME from './theme.styles';
 
 export const KeypadTheme = styled.div`
+  position: absolute;
+  width: 100%;
+  bottom: 60px;
+
   input {
     width: 100%;
     height: 100px;
