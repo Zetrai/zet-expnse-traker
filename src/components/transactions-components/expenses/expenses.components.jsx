@@ -3,6 +3,8 @@ import React, { useState, useRef } from 'react';
 import Keyboard from 'react-simple-keyboard';
 import 'react-simple-keyboard/build/css/index.css';
 
+import InputNumber from '../../common/input-number/input-number.component';
+
 import { ExpensesContainer } from './expenses.styles';
 import { KeypadTheme } from '../../../theme/theme.keypad.styles.jsx';
 
@@ -37,7 +39,7 @@ const Expenses = () => {
   };
   return (
     <ExpensesContainer>
-      <div>{expensesValue}</div>
+      <InputNumber input={expensesValue} />
       <KeypadTheme>
         <Keyboard
           keyboardRef={(r) => (keyboard.current = r)}
