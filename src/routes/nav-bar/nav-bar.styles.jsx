@@ -6,8 +6,7 @@ import THEME from '../../theme/theme.styles';
 export const NavBarContainer = styled.div`
   height: 100%;
   display: grid;
-  grid-template-rows: 11fr 1fr;
-  row-gap: 20px;
+  grid-template-rows: 14fr 2fr;
 `;
 
 export const NavContainer = styled.div`
