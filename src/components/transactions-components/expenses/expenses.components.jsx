@@ -17,7 +17,13 @@ const Expenses = () => {
   const [hidePad, toggleHide] = useState(false);
   const [expensesValue, setExpenses] = useState(0);
   const onChange = (input) => {
-    setExpenses(input);
+    const re = /^[0-9\b]+$/;
+    if (re.test(input)) {
+      // check if the input is number and not backspace.
+      setExpenses(input);
+    } else {
+      setExpenses(0);
+    }
     console.log('Input changed', input);
   };
 

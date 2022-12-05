@@ -11,6 +11,34 @@ export const KeypadTheme = styled.div`
   }
 
   /*
+  Theme: default
+  */
+  .hg-theme-default {
+    height: 100%;
+  }
+  .hg-rows {
+    height: 100%;
+  }
+  .hg-row {
+    height: 75px;
+  }
+  .hg-button {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    box-shadow: none;
+    span {
+      border-radius: 50%;
+      height: 100%;
+      width: 40%;
+      text-align: center;
+      padding: 14% 0;
+    }
+  }
+
+  /*
   Theme: numeric
   */
   .numeric-theme {
@@ -31,18 +59,10 @@ export const KeypadTheme = styled.div`
   }
 
   .simple-keyboard.dark-theme .hg-button {
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background: ${THEME.black};
     color: white;
-    border: none;
-    box-shadow: none;
     span {
-      padding: 10px 15px;
       background: ${THEME.grey};
-      border-radius: 50%;
     }
   }
 

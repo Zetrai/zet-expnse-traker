@@ -4,7 +4,7 @@ import THEME from '../../../theme/theme.styles';
 export const ExpensesContainer = styled.div`
   color: ${THEME.text};
   display: grid;
-  grid-template-rows: 12fr 6fr;
+  grid-template-rows: 12fr 12fr;
   .hide-pad {
     display: none;
   }
