@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const ProfileContainer = styled.div`
-  display: grid;
-  grid-template-rows: 10% 90%;
+  height: 100%;
 `;
 
 export const NavContainer = styled.div`

@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
 export const TransactionContainer = styled.div`
-  display: grid;
-  grid-template-rows: 10% 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const BodyContainer = styled.div`
-  display: grid;
-  grid-template-rows: 10% 90%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 `;

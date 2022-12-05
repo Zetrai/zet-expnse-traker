@@ -5,6 +5,7 @@ import THEME from '../../theme/theme.styles';
 
 export const NavBarContainer = styled.div`
   height: 100%;
+  flex-shrink: 10;
 `;
 
 export const NavContainer = styled.div`
