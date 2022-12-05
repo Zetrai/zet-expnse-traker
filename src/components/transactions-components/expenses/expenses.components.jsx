@@ -8,16 +8,14 @@ import { KeypadTheme } from '../../../theme/theme.keypad.styles.jsx';
 
 const Expenses = () => {
   const keypad = {
-    default: ['1 2 3', '4 5 6', '7 8 9', '{hide} 0 {bksp}'],
+    default: ['1 2 3', '4 5 6', '7 8 9', '. 0 {bksp}'],
   };
   const display = {
     '{bksp}': '⌫',
-    '{hide}': '⇓',
   };
-  const [hidePad, toggleHide] = useState(false);
   const [expensesValue, setExpenses] = useState(0);
   const onChange = (input) => {
-    const re = /^[0-9\b]+$/;
+    const re = /^[0-9.\b]+$/;
     if (re.test(input)) {
       // check if the input is number and not backspace.
       setExpenses(input);
@@ -28,32 +26,19 @@ const Expenses = () => {
   };
 
   const onKeyPress = (button) => {
-    if (button.includes('hide')) {
-      toggleHide(!hidePad);
-    }
     console.log('Button pressed', button);
   };
   return (
     <ExpensesContainer>
       <div>{expensesValue}</div>
       <KeypadTheme>
-        {!hidePad ? (
-          <Keyboard
-            onChange={onChange}
-            onKeyPress={onKeyPress}
-            layout={keypad}
-            theme='hg-theme-default hg-layout-numeric numeric-theme dark-theme'
-            display={display}
-          />
-        ) : (
-          <ShowPad
-            onClick={() => {
-              onKeyPress('hide');
-            }}
-          >
-            ⇑
-          </ShowPad>
-        )}
+        <Keyboard
+          onChange={onChange}
+          onKeyPress={onKeyPress}
+          layout={keypad}
+          theme='hg-theme-default hg-layout-numeric numeric-theme dark-theme'
+          display={display}
+        />
       </KeypadTheme>
     </ExpensesContainer>
   );

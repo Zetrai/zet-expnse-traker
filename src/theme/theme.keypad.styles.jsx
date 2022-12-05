@@ -56,9 +56,7 @@ export const KeypadTheme = styled.div`
   }
 
   .simple-keyboard.dark-theme .hg-button:active {
-    span {
-      background: ${THEME.focus};
-    }
+    background: ${THEME.focus};
   }
 
   #root .simple-keyboard.dark-theme + .simple-keyboard-preview {
