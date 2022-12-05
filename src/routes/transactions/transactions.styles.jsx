@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 
 export const TransactionContainer = styled.div`
-  margin-top: 30px;
+  height: 87vh;
   display: grid;
-  grid-template-rows: 1fr 15fr;
+  grid-template-rows: 10% 90%;
 `;
 
-export const BodyContainer = styled.div``;
+export const BodyContainer = styled.div`
+  display: grid;
+  grid-template-rows: 10% 90%;
+`;

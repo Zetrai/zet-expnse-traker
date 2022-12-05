@@ -35,7 +35,7 @@ const Expenses = () => {
   };
   return (
     <ExpensesContainer>
-      {expensesValue}
+      <div>{expensesValue}</div>
       <KeypadTheme>
         {!hidePad ? (
           <Keyboard

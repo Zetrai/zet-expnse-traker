@@ -1,5 +1,4 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
 
 import { ReactComponent as HomeIcon } from '../../assets/icons/home.svg';
 import { ReactComponent as WalletIcon } from '../../assets/icons/wallet.svg';
@@ -16,7 +15,6 @@ import {
 const NavBar = () => {
   return (
     <NavBarContainer>
-      <Outlet />
       <NavContainer>
         <NavLinks>
           <NavIcon

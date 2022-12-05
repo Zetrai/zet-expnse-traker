@@ -20,7 +20,6 @@ export const KeypadTheme = styled.div`
     height: 100%;
   }
   .hg-row {
-    height: 75px;
   }
   .hg-button {
     height: 80px;
@@ -29,13 +28,6 @@ export const KeypadTheme = styled.div`
     align-items: center;
     border: none;
     box-shadow: none;
-    span {
-      border-radius: 50%;
-      height: 100%;
-      width: 40%;
-      text-align: center;
-      padding: 14% 0;
-    }
   }
 
   /*
@@ -59,11 +51,8 @@ export const KeypadTheme = styled.div`
   }
 
   .simple-keyboard.dark-theme .hg-button {
-    background: ${THEME.black};
+    background: ${THEME.grey};
     color: white;
-    span {
-      background: ${THEME.grey};
-    }
   }
 
   .simple-keyboard.dark-theme .hg-button:active {

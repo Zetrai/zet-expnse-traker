@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import THEME, { fontStyle } from '../../../theme/theme.styles';
 
 export const HeaderContainer = styled.div`
+  padding-top: 30px;
   svg {
     width: 60px;
     height: 60px;

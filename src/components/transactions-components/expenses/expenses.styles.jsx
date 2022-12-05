@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import THEME from '../../../theme/theme.styles';
 
 export const ExpensesContainer = styled.div`
-  color: ${THEME.text};
   display: grid;
-  grid-template-rows: 12fr 12fr;
+  grid-template-rows: 50% 50%;
+  color: ${THEME.text};
   .hide-pad {
     display: none;
   }
